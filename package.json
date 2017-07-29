@@ -1,0 +1,18 @@
+{
+  "name": "csv2code",
+  "version": "1.0.0",
+  "description": "Code Generator from CSV files",
+  "main": ".",
+  "scripts": {
+    "ddl": "node ddl.js",
+    "dml": "node dml.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "neopan@126.com",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "csv": "^1.1.1",
+    "dot": "^1.1.2"
+  }
+}

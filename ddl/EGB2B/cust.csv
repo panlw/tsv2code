@@ -1,0 +1,42 @@
+MILESTONE	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	UI1	UI2
+M1	客户（主数据）	M_CUST	table					
+	公司CODE	OU_CODE	OU					
+	公司的经营单位编号	BP_CODE	BP					
+	仓库编号（默认出货仓库）	WH_CODE	WH					
+	客户编号，唯一	CUST_NO	CUST			1		
+	客户名称	CUST_NAME	WORD	200				
+	客户等级，UDC(58E/ML)	CUST_LEVEL	UDC		null			
+	客户行业大类，制造业和非制造业，UDC(01/12)	CUST_TYPE1	UDC					
+	客户行业中类，零售/批发/贸易/模具厂等，UDC(01/17)	CUST_TYPE2	UDC					
+	客户行业小类，五金店/螺丝店/螺丝买卖/塑料磨具等，UDC(E3/KL)	CUST_TYPE3	UDC					
+	客户类型，经销商/终端用户	CUST_CATEGORY	UDC					
+	标记客户状态，UDC(58E/AF)，01:意向客户；02：合作中；03：终止；04：目标客户	CUST_STATUS	UDC					
+	付款条款，客户结算方式（代码）	PAYMENT_TERMS	WORD	9				
+	付款条款，客户结算方式（描述）	PAYMENT_TERMS_DESC	WORD	30				
+	客户来源，UDC(58L/MK)	SOURCE_TYPE	UDC					
+	所有制类型	OWNERSHIP_TYPE	UDC					
+	营业执照信息	OPERLICENSE_NO	TEXT	120				
+	组织机构代码证号	ORGLICENSE_NO	WORD	120				
+	税务登记证号	TAXLICENSE_NO	WORD	100				
+	税率税区（税类型，增值税）	TAX_CODE	WORD	3				
+	客户的税率	TAX_RATE	TAX					
+	币种，UDC(77/CU)	CURR_CODE	UDC					
+	客户对应的业务员地址号	PIC_EMP_NO	EMP		null			
+	客户对应的业务员姓名	PIC_EMP_NAME	NAME		null			
+	国家	COUNTRY	UDC					
+	省，中文描述	PROVINCE	WORD	50				
+	市，中文描述	CITY	WORD	50				
+	区县，中文描述	DISTRICT	WORD	80				
+	街道/镇，中文描述	BLOCK	WORD	80				
+	街道门牌，中文描述	DETAILADDR	WORD	120				
+	是否总公司开票，Y/N	INV_HQ	UDC					
+	是否一般纳税人，Y/N	INV_GEN_TAXER	UDC					
+	增票标识，UDC(58H/IT)，01-增值税专用发票/02-增值税普通发票/03-不开票	VAT_IDEN	UDC					
+	开票类型，UDC(01/30)，0-专用发票/2-普通发票/9-不开票	INV_TYPE	UDC					
+	发票抬头	INV_TITLE	WORD	120				
+	税号	TAX_NO	WORD	100				
+	开户银行	BANK_NAME	WORD	100				
+	银行账号	ACC_NO	WORD	120				
+	注册地址	REG_ADDRESS	WORD	2000	null			
+	注册电话	REG_TEL	CODE		null			
+	最后编辑时间	MODIFY_TIME	TIME					

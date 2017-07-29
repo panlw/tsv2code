@@ -1,0 +1,8 @@
+S_ROLE			S_ROLE
+			
+ROLE_NAME	ROLE_CODE	ROLE_TYPE	ROLE_DESC
+总公司管理	SM	B	系统设置、帮助维护
+			
+总公司运营	OP_HO	B	查询、图片维护、产品图片维护、公司资料维护、公告维护、积分换购维护、非标申请查询
+分公司运营	OP_BO	B	产品查询、订单查询、客户用户维护、管辖区域维护
+分公司审批	EA_BO	B	订单取消审批、退货申请审批

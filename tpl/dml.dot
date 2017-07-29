@@ -1,0 +1,6 @@
+TRUNCATE TABLE {{=it.name}};
+INSERT INTO {{=it.name}} ({{=it.cols}}){{~it.rows :row:idx}}
+{{?idx > 0}}UNION ALL {{?}}SELECT {{=row}} FROM DUAL{{~}}
+;
+COMMIT;
+

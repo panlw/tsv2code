@@ -1,0 +1,107 @@
+MILESTONE	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	UI1	UI2
+M1	发号器	S_COUNTER	table					
+	发号器编码	COUNTER_CODE	CODE			1		
+	发号器描述	COUNTER_DESC	DESC					
+	发号键	COUNTER_KEY	CODE			2		
+	最大流水号	COUNTER_MAX	LONG					
+	当前流水号	COUNTER_VAL	LONG					
+								
+M1	主菜单配置	S_MENU	table					
+	菜单码	MENU_CODE	CODE			1		
+	菜单名	MENU_NAME	NAME					
+	菜单类型（M:菜单项、可见|C:配置项、不可见|X:禁用、不可见）	MENU_TYPE	FLAG					
+	菜单层级(一级菜单为1)	MENU_LVL	DEC1					
+	同级菜单显示顺序	MENU_SEQ	SEQ					
+	画面前端路由	MENU_URI	REQ		null		1	
+	API访问路径(支持Ant路径表达式)	MENU_API	REQ		null			1
+	菜单图标(fontawesome)	MENU_ICO	CODE					
+								
+M1	功能权限管控	S_FUNC	table					
+	菜单码	MENU_CODE	CODE					
+	功能码	FUNC_CODE	CODE			1		
+	功能名	FUNC_NAME	NAME					
+	详细描述	FUNC_DESC	DESC		null			
+	API或页面链接	FUNC_API	REQ				1	
+	配置类型（A:API|L:链接）	FUNC_TYPE	FLAG					1
+								
+M1	角色	S_ROLE	table					
+	角色码	ROLE_CODE	CODE			1		
+	角色名	ROLE_NAME	NAME					
+	角色描述	ROLE_DESC	DESC		null			
+	角色类型（B:基础角色|C:自定义角色）	ROLE_TYPE	FLAG		'C'			
+								
+M1	角色菜单配置	S_ROLE_MENU	table					
+	角色码	ROLE_CODE	CODE			1		
+	菜单码	MENU_CODE	CODE			2		
+								
+	角色功能配置	S_ROLE_FUNC	table					
+	角色码	ROLE_CODE	CODE			1		
+	功能码	FUNC_CODE	CODE			2		
+								
+	数据权限定义	S_DP_DEF	table					
+	配置编码	DP_CODE	CODE			1		
+	配置描述	DP_DESC	DESC					
+	数据权限默认选项（Y:1=1|N:1<>1）	DP_OPEN	BOOL					
+								
+	数据权限配置	S_DP_CFG	table					
+	用户类型	USER_TYPE	CODE			1		
+	配置编码	DP_CODE	CODE			2		
+	数据过滤方法(参考: DemoDpWay)	DP_WAY	CODE					
+								
+M1	管理用户	S_MGMT_USER	table					
+		DELETED	BOOL					
+		UPDATED_AT	TIME					
+		UPDATED_BY	ID					
+		CREATED_AT	TIME					
+		CREATED_BY	ID					
+		ID	ID			1		
+	邮箱（可用于登录）	EMAIL	MAIL				1	
+	电话（可用于登录）	PHONE	CODE					1
+	登录密码（SHA256+SALT）	PASSWORD	PWD					
+	密码的SALT	SALT	SALT					
+	用户名（用于画面展示）	USER_NAME	NAME					
+	用户类型（S:系统|H:总部|B:分公司）	USER_TYPE	FLAG					
+	员工号（S型用户为空）	EMP_NO	EMP		null			
+	所属的分公司编号（B型用户不为空）	OU_CODE	OU		null			
+								
+M1	商城用户	S_MALL_USER	table					
+		DELETED	BOOL					
+		UPDATED_AT	TIME					
+		UPDATED_BY	ID					
+		CREATED_AT	TIME					
+		CREATED_BY	ID					
+		ID	ID			1		
+	邮箱（可用于登录）	EMAIL	MAIL				1	
+	电话（可用于登录）	PHONE	CODE					1
+	登录密码（SHA256+SALT）	PASSWORD	PWD					
+	密码的SALT	SALT	SALT					
+	用户名（用于画面展示）	USER_NAME	NAME					
+	用户类型（U:普通用户|C:建档客户）	USER_TYPE	FLAG					
+	客户号	CUST_CODE	CUST		null			
+	对应的的分公司编号	OU_CODE	OU		null			
+								
+	用户行为审计	S_TRACE	table					
+		ID	ID			1		
+	登录号	LOGIN_NO	MAIL					
+	登录时间	LOGIN_TIME	TIME					
+	登出时间	LOGOUT_TIME	TIME		null			
+	访问的客户端IP地址	CLIENT_IP	IP					
+	访问的浏览器环境信息	CLIENT_UA	WORD	512				
+	用户	ACTION_UID	ID					
+	应用	ACTION_APP	CODE					
+	节点	ACTION_SVR	CODE					
+								
+	访问路径审计	S_TRACE_REQ	table					
+		ID	ID			1		
+	S_TRACE.ID	TRACE_ID	ID					
+	访问的类型（U:URI|A:API）	ACCESS_TYPE	FLAG					
+	访问的REQ	ACCESS_REQ	REQ					
+	访问的时间	ACCESS_TIME	TIME					
+								
+	数据更新审计	S_TRACE_REQ_OP	table					
+	S_TRACE.ID	TRACE_ID	ID					
+	S_TRACE_REQ.ID	TRACE_REQ_ID	ID			1		
+	操作顺序	ACTION_SEQ	SEQ			2		
+	数据表名	TABLE_NAME	CODE					
+	数据ID	RECORD_ID	ID					
+	操作命令（C|U|X|D）	ACTION_OP	FLAG					

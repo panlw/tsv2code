@@ -1,0 +1,31 @@
+S_MENU					前端路由	API 前缀：/b2badmin/api	S_MENU
+			N	N			
+MENU_NAME	MENU_CODE	MENU_TYPE	MENU_LVL	MENU_SEQ	MENU_URI	MENU_API	MENU_ICO
+系统	SM	M	1	1		/sm/**	wrench
+管理用户维护	SM_USERS	M	2	1	#sm/users	/sm/users/**	wrench
+系统角色维护	SM_ROLES	M	2	2	#sm/roles	/sm/roles/**	wrench
+系统配置维护	SM_CONF	X	2	3	#sm/conf	/sm/conf	wrench
+帮助信息维护	SM_HELPS	X	2	4	#sm/helps	/sm/helps/**	wrench
+维护	OP	M	1	2		/op/**	cog
+产品图片维护	OP_ITEM_PICS	M	2	1	#op/item_pics	/op/item_pics/**	cog
+配套商品维护	OP_ITEM_AUXS	M	2	2	#op/item_auxs	/op/item_auxs/**	cog
+替代商品维护	OP_ITEM_SUBS	M	2	3	#op/item_subs	/op/item_subs/**	cog
+积分换购维护	OP_GIFTS	X	2	4	#op/gifts	/op/gifts/**	cog
+公司资料维护	OP_ASSETS	X	2	5	#op/assets	/op/assets/**	cog
+公告消息维护	OP_ANNOUNCES	X	2	6	#op/announces	/op/announces/**	cog
+首页图片维护	OP_PICS	X	2	7	#op/pics	/op/pics/**	cog
+客户用户维护	OP_CUST_USERS	M	2	8	#op/cust_users	/op/cust_users/**	cog
+第三方物流维护	OP_DELIVERS	M	2	9	#op/deliveries	/op/deliveries/**	cog
+管辖区域维护	OP_REGIONS	X	2	10	#op/regions	/op/regions/**	cog
+							
+查询	QY	M	1	3		/qy/**	search
+订单查询	QY_ORDERS	M	2	1	#qy/orders	/qy/orders/**	search
+客户查询	QY_CUSTS	M	2	2	#qy/custs	/qy/custs/**	search
+产品查询	QY_ITEMS	M	2	3	#qy/items	/qy/items/**	search
+面价、折扣查询	QY_PRICES	M	2	4	#qy/prices	/qy/prices/**	search
+缺货登记	QY_LACKS	M	2	5	#qy/lacks	/qy/lacks/**	search
+非标查询	QY_NON_STDS	X	2	6	#qy/non_stds	/qy/non_stds/**	search
+							
+审批	EA	X	1	4		/ea/**	legal
+退货申请审批	EA_RETURNS	X	2	1	#ea/return	/ea/returns/**	legal
+订单取消审批	EA_CANCELS	X	2	2	#ea/cancel	/ea/cancels/**	legal
