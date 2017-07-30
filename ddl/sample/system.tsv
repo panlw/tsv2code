@@ -48,7 +48,7 @@ M1	角色菜单配置	S_ROLE_MENU	table
 	配置编码	DP_CODE	CODE			2		
 	数据过滤方法(参考: DemoDpWay)	DP_WAY	CODE					
 								
-M1	管理用户	S_MGMT_USER	table					
+M1	管理用户	S_USER	table					
 		DELETED	BOOL					
 		UPDATED_AT	TIME					
 		UPDATED_BY	ID					
@@ -61,24 +61,7 @@ M1	管理用户	S_MGMT_USER	table
 	密码的SALT	SALT	SALT					
 	用户名（用于画面展示）	USER_NAME	NAME					
 	用户类型（S:系统|H:总部|B:分公司）	USER_TYPE	FLAG					
-	员工号（S型用户为空）	EMP_NO	EMP		null			
-	所属的分公司编号（B型用户不为空）	OU_CODE	OU		null			
-								
-M1	商城用户	S_MALL_USER	table					
-		DELETED	BOOL					
-		UPDATED_AT	TIME					
-		UPDATED_BY	ID					
-		CREATED_AT	TIME					
-		CREATED_BY	ID					
-		ID	ID			1		
-	邮箱（可用于登录）	EMAIL	MAIL				1	
-	电话（可用于登录）	PHONE	CODE					1
-	登录密码（SHA256+SALT）	PASSWORD	PWD					
-	密码的SALT	SALT	SALT					
-	用户名（用于画面展示）	USER_NAME	NAME					
-	用户类型（U:普通用户|C:建档客户）	USER_TYPE	FLAG					
-	客户号	CUST_CODE	CUST		null			
-	对应的的分公司编号	OU_CODE	OU		null			
+	员工号（S型用户为空）	EMP_CODE	CODE		null			
 								
 	用户行为审计	S_TRACE	table					
 		ID	ID			1		

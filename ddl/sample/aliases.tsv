@@ -24,10 +24,3 @@ NAME	nvarchar2	20		名称
 DESC	nvarchar2	200		描述
 REQ	varchar2	100		请求
 MAIL	varchar2	40		邮件
-				
-OU	nchar	5		公司码
-BP	nchar	12		公司的经营单位编号
-WH	nchar	12		仓库码
-EMP	number	10		员工号
-CUST	number	10		客户号
-TAX	number	4,2		税率
