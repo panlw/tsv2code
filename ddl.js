@@ -1,9 +1,10 @@
 const csv2ddl = require('./lib/csv2ddl');
 
-const csvAliasFile = './ddl/egb2b/aliases.tsv';
+const baseDir = './ddl/sample';
+const csvAliasFile = baseDir + '/aliases.tsv';
 const csvTblDefFiles = [
-  './ddl/egb2b/system.tsv',
-  './ddl/egb2b/cust.tsv',
+  baseDir + '/system.tsv',
+  baseDir + '/cust.tsv',
 ];
 const outFile = './out/ddl.sql';
 

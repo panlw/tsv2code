@@ -1,8 +1,9 @@
 const csv2dml = require('./lib/csv2dml');
 
+const baseDir = './dml/sample';
 const csvTblDataFiles = [
-  './dml/egb2b/S_MENU.tsv',
-  './dml/egb2b/S_ROLE.tsv',
+  baseDir + '/S_MENU.tsv',
+  baseDir + '/S_ROLE.tsv',
 ];
 const outFile = './out/dml.sql';
 

@@ -1,0 +1,8 @@
+S_MENU					前端路由	API 前缀：/app/api	S_MENU
+			N	N			
+MENU_NAME	MENU_CODE	MENU_TYPE	MENU_LVL	MENU_SEQ	MENU_URI	MENU_API	MENU_ICO
+系统	SM	M	1	1		/sm/**	wrench
+管理用户维护	SM_USERS	M	2	1	#sm/users	/sm/users/**	wrench
+系统角色维护	SM_ROLES	M	2	2	#sm/roles	/sm/roles/**	wrench
+系统配置维护	SM_CONF	X	2	3	#sm/conf	/sm/conf	wrench
+帮助信息维护	SM_HELPS	X	2	4	#sm/helps	/sm/helps/**	wrench
