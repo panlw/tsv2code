@@ -1,6 +1,6 @@
 {{#def.tbl}}
-COMMENT ON TABLE {{=it.name}} IS '{{=it.desc}}';{{~it.cols :col:idx}}
-COMMENT ON COLUMN {{=it.name}}.{{=col.name}} IS '{{=col.desc}}';{{~}}{{?it.uidx.ui1}}
+COMMENT ON TABLE {{=it.name}} IS '{{=it.desc}}';{{~it.cols :col:idx}}{{?col.desc}}
+COMMENT ON COLUMN {{=it.name}}.{{=col.name}} IS '{{=col.desc}}';{{?}}{{~}}{{?it.uidx.ui1}}
 
 CREATE UNIQUE INDEX {{=it.name}}_UI1 ON {{=it.name}} ({{=it.uidx.ui1}});{{?}}{{?it.uidx.ui2}}
 CREATE UNIQUE INDEX {{=it.name}}_UI2 ON {{=it.name}} ({{=it.uidx.ui2}});{{?}}{{?it.id}}

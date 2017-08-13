@@ -2,4 +2,5 @@
 CREATE TABLE {{=it.name}} ({{~it.cols :col:idx}}
   {{#def.col}}{{~}}
   CONSTRAINT {{=it.name}}_PK PRIMARY KEY ({{=it.uidx.pk}})
-);
+){{?it.sync}} NOLOGGING;
+--INSERT INTO {{=it.name}} SELECT * FROM {{=it.sync}}{{=it.name}}{{?}};
