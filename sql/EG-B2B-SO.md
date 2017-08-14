@@ -1,0 +1,12 @@
+```sql
+select 'F58H0401' T, CHE58HUF04, count(1) N from PRODDTA.F58H0401 where CHE58HOS='980' group by CHE58HUF04
+union all
+select 'F58H0411' T, CHE58HUF04, count(1) N from PRODDTA.F58H0411 where CHE58HOS='980' group by CHE58HUF04
+```
+
+```tsv
+F58H0401	2	4
+F58H0401	 	6470
+F58H0411	3	26331
+F58H0411	 	1
+```
