@@ -4,6 +4,7 @@
   "description": "Code Generator from CSV files",
   "main": ".",
   "scripts": {
+    "check": "eslint lib",
     "ddl": "node ddl.js",
     "dml": "node dml.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,8 +12,15 @@
   "author": "neopan@126.com",
   "license": "MIT",
   "dependencies": {
-    "bluebird": "^3.5.0",
-    "csv": "^1.1.1",
-    "dot": "^1.1.2"
+    "dot": "^1.1.2",
+    "mockjs": "^1.0.1-beta3"
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }

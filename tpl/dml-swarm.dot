@@ -1,0 +1,4 @@
+TRUNCATE TABLE {{=it.name}};{{~it.rows :row}}
+INSERT INTO {{=it.name}} ({{=it.cols}}) VALUES ({{=row}});{{~}}
+COMMIT;
+

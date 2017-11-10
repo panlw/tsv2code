@@ -1,0 +1,49 @@
+ALIAS	TYPE	SIZE	DEF. VALUE	DESC	DESC2
+					
+TEXT	nvarchar2			任意文字	
+WORD	varchar2			英数	
+CHAR	char			定长英数	
+					
+ID	number	18		自增ID	
+INT1	number	1		一位正整数	
+INT2	number	2		两位正整数	
+SEQ	number	3		顺序	
+INT	number	8		长整型	
+LONG	number	18		长整型	
+TIME	date		sysdate	时刻	
+DATE	date		sysdate	日期	
+BOOL	char	1	'0'	布尔(1|0)	
+					
+IP	char	15		IPv4	
+PWD	char	64		登录密码（SHA256+SALT）	
+SALT	char	16		密码的SALT	
+FLAG	char	1		标记	
+					
+CODE	varchar2	20		编码	
+NAME	nvarchar2	40		名称	
+ABBR	nvarchar2	20		简称	
+DESC	nvarchar2	200		描述	
+URL	varchar2	100		链接	
+MAIL	varchar2	60		邮件	
+ADDR	nvarchar2	200		地址	
+					
+					
+JD	number	6		儒日历	1YYDDD
+JT	number	6		儒时间	HHMMSS
+AN8	number	8		地址号	
+MCU	nchar	12		经营单位代码	前空、分公司MCU前空7位、仓库MCU前空6位
+CO	nchar	5		公司代码	
+BP	nchar	10		分公司代码	目前后空5位
+ITM	number	8		料品号	料品短项目号
+LITM	nchar	25		料品代码	料品第二项目号
+UDC	nchar	10		UDC值	
+UDC1	nchar	1		UDC值(1字符)	
+UDC2	nchar	2		UDC值(2字符)	
+UDC3	nchar	3		UDC值(3字符)	
+					
+SOID	number	14		订单ID	
+LINE	number	8		订单行	
+					
+					
+TAX	number	4,2		税率	
+CUR	nchar	3		货币代码	

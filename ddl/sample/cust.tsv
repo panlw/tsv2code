@@ -1,5 +1,0 @@
-MILESTONE	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	UI1	UI2
-M1	客户（主数据）	M_CUST	table					
-	客户编号，唯一	CUST_NO	CUST			1		
-	客户名称	CUST_NAME	NAME					
-	最后编辑时间	MODIFY_TIME	TIME					

@@ -1,10 +1,8 @@
-{{#def.tbl}}
+{{#def.tbl}}{{?it.type !== 'mysql'}}
 COMMENT ON TABLE {{=it.name}} IS '{{=it.desc}}';{{~it.cols :col:idx}}{{?col.desc}}
-COMMENT ON COLUMN {{=it.name}}.{{=col.name}} IS '{{=col.desc}}';{{?}}{{~}}{{?it.uidx.ui1}}
+COMMENT ON COLUMN {{=it.name}}.{{=col.name}} IS '{{=col.desc}}';{{?}}{{~}}{{?it.id}}
 
-CREATE UNIQUE INDEX {{=it.name}}_UI1 ON {{=it.name}} ({{=it.uidx.ui1}});{{?}}{{?it.uidx.ui2}}
-CREATE UNIQUE INDEX {{=it.name}}_UI2 ON {{=it.name}} ({{=it.uidx.ui2}});{{?}}{{?it.id}}
-
-CREATE SEQUENCE SEQ_{{=it.name}} MINVALUE 1 MAXVALUE 999999999999999999 CACHE 50;{{?}}
+CREATE SEQUENCE SEQ_{{=it.name}} MINVALUE 1 MAXVALUE 999999999999999999 CACHE 50;{{?}}{{?}}{{~it.ixes :ix:ixix}}{{? ixix && ix.keys}}
+CREATE{{?ix.uniq}} UNIQUE{{?}} INDEX {{=it.name}}_X{{=ixix}} ON {{=it.name}} ({{=ix.keys}});{{?}}{{~}}
 
 

@@ -1,6 +1,6 @@
---DROP TABLE {{=it.name}};
+DROP TABLE IF EXISTS {{=it.name}};
 CREATE TABLE {{=it.name}} ({{~it.cols :col:idx}}
-{{?idx}}, {{??}}  {{?}}{{#def.col}}{{~}}{{?it.uidx.pk}}
-, CONSTRAINT {{=it.name}}_PK PRIMARY KEY ({{=it.uidx.pk}}){{?}}
-){{?it.sync}} NOLOGGING;
+{{?idx}}, {{??}}  {{?}}{{#def.col}}{{~}}{{?it.ixes[0].keys}}
+, CONSTRAINT {{=it.name}}_PK PRIMARY KEY ({{=it.ixes[0].keys}}){{?}}
+){{?it.type === 'mysql'}} COMMENT '{{=it.desc}}'{{?}}{{?it.sync}} NOLOGGING;
 --INSERT INTO {{=it.name}} SELECT * FROM {{=it.sync}}{{=it.name}}{{?}};

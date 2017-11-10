@@ -1,0 +1,11 @@
+	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
+T	用户	PS_S_USER	mysql				U	
+C		DELETED	BOOL					
+C		UPDATED	TIME					
+C		ID	ID		ID	1		
+C	登录号（俗称用户名）	LOGIN_NO	CODE				1	
+C	密码（SHA256+SALT）	PASSWORD	SHA256					
+C	密码的SALT	SALT	SALT					
+C	用户显示名	USER_NAME	NAME					
+C	用户类型	USER_TYPE	UDC3					
+								
