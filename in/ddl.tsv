@@ -1,5 +1,5 @@
 	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
-T	用户	PS_S_USER	mysql				U	
+T	用户	PS_S_USER					U	
 C		DELETED	BOOL					
 C		UPDATED	TIME					
 C		ID	ID		ID	1		
@@ -10,16 +10,16 @@ C	用户显示名	USER_NAME	NAME
 C	用户类型	USER_TYPE	UDC3					
 								
 	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
-T	菜单	PS_S_MENU	mysql					
+T	菜单	PS_S_MENU						
 C		DELETED	BOOL					
 C		UPDATED	TIME					
 C		ID	INT			1		
 C	菜单标题	TITLE	NAME					
-C	描述信息	DESC	DESC					
+C	描述信息	DESC	DESC		null			
 C	前端路由	URI	URL					
 								
 	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
-T	产品	PS_M_ITEM	mysql					
+T	产品	PS_M_ITEM						
 C		DELETED	BOOL					
 C		UPDATED	TIME					
 C	产品代码	CODE	CODE			1		
@@ -36,7 +36,7 @@ C	实际库存	QTY_ON_HAND	LONG
 C	承诺量	QTY_OF_LOCK	LONG					
 								
 	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
-T	购物车	PS_T_CART	mysql					
+T	购物车	PS_T_CART						
 C		DELETED	BOOL					
 C		UPDATED	TIME					
 C	用户ID	USER_ID	ID			1		
@@ -45,19 +45,20 @@ C	订购数量	QTY	LONG
 C	加入时间	ADD_TIME	TIME					
 								
 	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
-T	销售单	PS_T_SO	mysql					
+T	销售单	PS_T_SO						
 C		DELETED	BOOL					
 C		UPDATED	TIME					
-C	销售单ID	ID	ID			1		
+C	销售单ID	ID	ID		ID	1		
 C	下单时间	BUY_TIME	TIME					
 C	下单用户ID	BUY_USER	ID				1	
 								
 	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
-T	销售单明细	PS_T_SO_LINE	mysql					
+T	销售单明细	PS_T_SO_LINE						
 C		DELETED	BOOL					
 C		UPDATED	TIME					
-C	销售单ID	ID	ID			1		
-C	产品代码	ITEM_CODE	CODE			2		
+C	销售单ID	SO_ID	ID			1	1	
+C	行号	LN	INT			2		
+C	产品代码	ITEM_CODE	CODE				2	
 C	订购数量	QTY	LONG					
 C	销售单价	PRC_D4	LONG					
 C	金额	AMT_D4	LONG					
