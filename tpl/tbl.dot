@@ -1,4 +1,4 @@
-{{#def.tbl}}{{?it.type !== 'mysql'}}
+{{#def.tbl}}{{?it.type === 'oracle'}}
 COMMENT ON TABLE {{=it.name}} IS '{{=it.desc}}';{{~it.cols :col:idx}}{{?col.desc}}
 COMMENT ON COLUMN {{=it.name}}.{{=col.name}} IS '{{=col.desc}}';{{?}}{{~}}{{?it.id}}
 

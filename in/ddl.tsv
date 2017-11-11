@@ -10,6 +10,15 @@ C	用户显示名	USER_NAME	NAME
 C	用户类型	USER_TYPE	UDC3					
 								
 	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
+T	菜单	PS_S_MENU	mysql					
+C		DELETED	BOOL					
+C		UPDATED	TIME					
+C		ID	INT			1		
+C	菜单标题	TITLE	NAME					
+C	描述信息	DESC	DESC					
+C	前端路由	URI	URL					
+								
+	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
 T	产品	PS_M_ITEM	mysql					
 C		DELETED	BOOL					
 C		UPDATED	TIME					
@@ -19,7 +28,7 @@ C	产品类型	TYPE	FLAG				1
 C	产品价格(一般会独立模型维护)	PRC_D4	LONG					
 								
 	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
-T	库存	PS_T_INV	mysql					
+T	库存	PS_T_INV						
 C		DELETED	BOOL					
 C		UPDATED	TIME					
 C	产品代码	ITEM_CODE	CODE			1		

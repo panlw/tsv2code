@@ -1,8 +1,5 @@
 const Mock = require('mockjs')
 const Random = Mock.Random
-const fs = require('fs')
-const dots = require('./lib/dots')
-const toSqlTbl = require('./lib/toSqlTbl')
 
 function leftPad (num, len) {
   return (Math.pow(10, len) + num + '').substr(1)
@@ -58,7 +55,4 @@ const invTblDef = {
   }).rows
 }
 
-const dmlFile = './out/dml.sql'
-fs.writeFileSync(dmlFile, '')
-fs.appendFileSync(dmlFile, dots.dml(toSqlTbl(itemTblDef)))
-fs.appendFileSync(dmlFile, dots.dml(toSqlTbl(invTblDef)))
+module.exports = [ itemTblDef, invTblDef ]

@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS {{=it.name}};
+DROP TABLE {{?it.type === 'mysql'}}IF EXISTS {{?}}{{=it.name}};
 CREATE TABLE {{=it.name}} ({{~it.cols :col:idx}}
 {{?idx}}, {{??}}  {{?}}{{#def.col}}{{~}}{{?it.ixes[0].keys}}
 , CONSTRAINT {{=it.name}}_PK PRIMARY KEY ({{=it.ixes[0].keys}}){{?}}
