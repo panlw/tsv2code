@@ -9,3 +9,47 @@ C	密码的SALT	SALT	SALT
 C	用户显示名	USER_NAME	NAME					
 C	用户类型	USER_TYPE	UDC3					
 								
+	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
+T	产品	PS_M_ITEM	mysql					
+C		DELETED	BOOL					
+C		UPDATED	TIME					
+C	产品代码	CODE	CODE			1		
+C	产品名	NAME	NAME					
+C	产品类型	TYPE	FLAG				1	
+C	产品价格(一般会独立模型维护)	PRC_D4	LONG					
+								
+	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
+T	库存	PS_T_INV	mysql					
+C		DELETED	BOOL					
+C		UPDATED	TIME					
+C	产品代码	ITEM_CODE	CODE			1		
+C	实际库存	QTY_ON_HAND	LONG					
+C	承诺量	QTY_OF_LOCK	LONG					
+								
+	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
+T	购物车	PS_T_CART	mysql					
+C		DELETED	BOOL					
+C		UPDATED	TIME					
+C	用户ID	USER_ID	ID			1		
+C	产品代码	ITEM_CODE	CODE			2		
+C	订购数量	QTY	LONG					
+C	加入时间	ADD_TIME	TIME					
+								
+	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
+T	销售单	PS_T_SO	mysql					
+C		DELETED	BOOL					
+C		UPDATED	TIME					
+C	销售单ID	ID	ID			1		
+C	下单时间	BUY_TIME	TIME					
+C	下单用户ID	BUY_USER	ID				1	
+								
+	DESC	NAME	TYPE	SIZE	DEF. VALUE	PK	IX1	IX2
+T	销售单明细	PS_T_SO_LINE	mysql					
+C		DELETED	BOOL					
+C		UPDATED	TIME					
+C	销售单ID	ID	ID			1		
+C	产品代码	ITEM_CODE	CODE			2		
+C	订购数量	QTY	LONG					
+C	销售单价	PRC_D4	LONG					
+C	金额	AMT_D4	LONG					
+								
