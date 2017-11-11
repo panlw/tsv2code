@@ -1,7 +1,7 @@
 {
-  "name": "csv2code",
+  "name": "tsv2code",
   "version": "1.0.0",
-  "description": "Code Generator from CSV files",
+  "description": "Code Generator from TSV files",
   "main": ".",
   "scripts": {
     "check": "eslint lib",
@@ -15,12 +15,5 @@
     "dot": "^1.1.2",
     "mockjs": "^1.0.1-beta3"
   },
-  "devDependencies": {
-    "eslint": "^4.10.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1"
-  }
+  "devDependencies": {}
 }
